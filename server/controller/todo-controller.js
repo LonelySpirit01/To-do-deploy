@@ -1,5 +1,8 @@
 import Stripe from "stripe";
 import Todo from "../model/Todo.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const stripe = new Stripe(process.env.STRIPE_SECRET);
 
