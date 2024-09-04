@@ -1,9 +1,7 @@
 import Stripe from "stripe";
 import Todo from "../model/Todo.js";
 
-const stripe = new Stripe(
-  "sk_test_51PvDt6RtGn6rg8aPXzvusMTlfYcm9Gq8qVNKzjyKh9p1DOixbMw5QQNOGEYKstRvq4qTXUrkhMTcQ3WWwYiziI7900riXCzHmM"
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET);
 
 export const addTodo = async (request, response) => {
   try {
