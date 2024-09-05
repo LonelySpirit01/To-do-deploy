@@ -1,8 +1,9 @@
 import axios from "axios";
 
+const API_URL = "https://to-do-mgt4.onrender.com";
 const Header = () => {
   const makePayment = async () => {
-    let response = await axios.post("https://to-do-mgt4.onrender.com/todos/checkout");
+    let response = await axios.post(`${API_URL}/todos/checkout`);
     if (response && response.status === 200) {
       window.location.href = response.data.url;
       console.log(response.data);
